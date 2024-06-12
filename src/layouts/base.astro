@@ -1,0 +1,20 @@
+---
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ijme Sunchales</title>
+  </head>
+  <body>
+		<Header />
+		
+    <slot />
+
+    <Footer />
+  </body>
+</html>

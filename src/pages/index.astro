@@ -1,7 +1,51 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/base.astro";
+import Section from "../layouts/section.astro";
 ---
 
-<Layout>
-	
-</Layout>
+<BaseLayout>
+  <section>
+    <img src="./src/img/hero.webp" alt="hero" />
+    <h2>Bienvenido a casa</h2>
+    <p>
+      Pero recibireis poder cuando haya venido sobre vosotros el Espiritu Santo
+    </p>
+    <strong>Hechos 1:8</strong>
+    <button>Recibir uncion</button>
+  </section>
+
+  <Section id="galeria" />
+
+  <Section id="ministerios" title="Ministerios" />
+
+  <Section id="nosotros">
+    <p>
+      La Iglesia Jesucristo Mi Esperanza (IJME) tiene como cabeza y autoridad al
+      Señor Jesús, dándole unidad, propósito y dirección. Se predica el
+      verdadero evangelio del Señor Jesús, que salva, restaura y santifica vidas
+      por medio de la obra del Espíritu Santo.
+    </p>
+
+    <p>
+      “Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para
+      que el mundo sea salvo por él.”
+    </p>
+    <strong>Juan 3:16</strong>
+
+    <p>
+      “Mas a todos los que le recibieron, a los que creen en su nombre, les dio
+      potestad de ser hechos hijos de Dios; los cuales no son engendrados de
+      sangre, ni de voluntad de carne, ni de voluntad de varón, sino de Dios”
+    </p>
+    <strong>Juan 1:12</strong>
+
+    <p>
+      Las personas que aceptan y reconocen a Jesús como su Señor y salvador
+      personal, se convierten en un hijo/a de Dios.
+    </p>
+  </Section>
+
+  <Section id="faq" title="FAQ">
+    
+  </Section>
+</BaseLayout>
