@@ -1,16 +1,16 @@
 ---
-import Radio from "../icons/radio.astro";
+import Logo from "./logo.astro";
 import Nav from "./nav.astro";
+import Radio from "./radio.tsx";
 import Social from "./social.astro";
 ---
 
 <header>
+  <Logo />
+
   <Nav />
 
-  <button
-    >Radio
-    <Radio />
-  </button>
+  <Radio client:load />
 
   <Social />
 </header>
