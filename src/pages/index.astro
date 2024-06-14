@@ -1,24 +1,22 @@
 ---
+import Ministerios from "../components/ministerios.astro";
+import Hero from "../components/hero.astro";
 import BaseLayout from "../layouts/base.astro";
 import Section from "../layouts/section.astro";
 ---
 
 <BaseLayout>
-  <section>
-    <img src="./src/img/hero.webp" alt="hero" />
-    <h2>Bienvenido a casa</h2>
-    <p>
-      Pero recibireis poder cuando haya venido sobre vosotros el Espiritu Santo
-    </p>
-    <strong>Hechos 1:8</strong>
-    <button>Recibir uncion</button>
-  </section>
+  <Section id="hero">
+    <Hero />
+  </Section>
 
-  <Section id="galeria" />
+  <Section id="galeria" padding />
 
-  <Section id="ministerios" title="Ministerios" />
+  <Section id="ministerios" title="ministerios" padding>
+    <Ministerios />
+  </Section>
 
-  <Section id="nosotros">
+  <Section id="nosotros" padding>
     <p>
       La Iglesia Jesucristo Mi Esperanza (IJME) tiene como cabeza y autoridad al
       Señor Jesús, dándole unidad, propósito y dirección. Se predica el
@@ -45,7 +43,5 @@ import Section from "../layouts/section.astro";
     </p>
   </Section>
 
-  <Section id="faq" title="FAQ">
-    
-  </Section>
+  <Section id="faq" title="FAQ" padding />
 </BaseLayout>

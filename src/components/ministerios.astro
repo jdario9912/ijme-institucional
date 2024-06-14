@@ -1,0 +1,15 @@
+---
+import MiniterioCard from "./miniterio-card.astro";
+
+const ministerios = [
+  {
+    icono: "auricular",
+    titulo: "finanzas",
+    descripcion: "bla bla bla",
+  },
+];
+---
+
+<div>
+  {ministerios.map((ministerio) => <MiniterioCard {...ministerio} />)}
+</div>

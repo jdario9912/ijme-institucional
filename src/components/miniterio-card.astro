@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+
+type Props = {
+  icono: string;
+  titulo: string;
+  descripcion: string;
+};
+
+const { descripcion, icono, titulo } = Astro.props;
+---
+
+<div class="card-ministerio-container">
+  <Icon name={icono} />
+  <h3>{titulo}</h3>
+  <p>{descripcion}</p>
+</div>
+
+<style>
+  .card-ministerio-container {
+    /* background-color: black; */
+  }
+
+  [data-icon] {
+    font-size: 2rem;
+    color: blue;
+  }
+</style>

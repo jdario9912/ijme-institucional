@@ -1,8 +1,8 @@
 ---
 import Logo from "./logo.astro";
 import Nav from "./nav.astro";
-import Radio from "./radio.tsx";
 import Social from "./social.astro";
+import Radio from "./react/radio";
 ---
 
 <header>
@@ -14,3 +14,12 @@ import Social from "./social.astro";
 
   <Social />
 </header>
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+</style>

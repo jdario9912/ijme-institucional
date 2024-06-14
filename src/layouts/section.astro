@@ -2,11 +2,19 @@
 type Props = {
   id: string;
   title?: string;
+  padding?: boolean;
 };
 
-const { id, title } = Astro.props;
+const { id, title, padding } = Astro.props;
 ---
 
-<section id={id}>
+<section class={padding ? "section" : ""} id={id}>
+  {title && <h2>{title}</h2>}
   <slot />
 </section>
+
+<style>
+  .section {
+    padding: 0 3rem 0 3rem;
+  }
+</style>

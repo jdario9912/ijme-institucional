@@ -1,4 +1,4 @@
-import RadioIcon from "./react/icons/radio";
+import RadioIcon from "./icons/radio";
 
 const Radio = () => {
   return (
