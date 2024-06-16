@@ -1,28 +1,50 @@
 ---
+import type { ImageMetadata } from "astro";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 
-type Props = {
-  icono: string;
-  titulo: string;
-  descripcion: string;
-};
+type Props = Ministerio;
 
-const { descripcion, icono, titulo } = Astro.props;
+const { descripcion, titulo, icono, imagePath } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/img/ministerios/*.webp"
+);
+
+if (!images[imagePath])
+  throw new Error(
+    `${imagePath} does not exist in glob src/img/ministerios/*.webp`
+  );
+
+const imagen = images[imagePath]();
 ---
 
-<div class="card-ministerio-container">
+<div class="container">
+  <Image src={imagen} alt={icono} />
   <Icon name={icono} />
   <h3>{titulo}</h3>
   <p>{descripcion}</p>
 </div>
 
 <style>
-  .card-ministerio-container {
-    /* background-color: black; */
+  .container {
+    background-color: grey;
   }
 
   [data-icon] {
     font-size: 2rem;
     color: blue;
+  }
+
+  @media (width < 992px) {
+    img {
+      display: none;
+    }
+  }
+
+  @media (width >= 992px) {
+    [data-icon] {
+      display: none;
+    }
   }
 </style>
