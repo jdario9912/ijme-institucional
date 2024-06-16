@@ -1,8 +1,11 @@
 import RadioIcon from "./icons/radio";
 
 const Radio = () => {
+  const escucharRadio = () => {
+    console.log("escuchando radio");
+  };
   return (
-    <button>
+    <button onClick={escucharRadio}>
       Radio
       <RadioIcon />
     </button>
