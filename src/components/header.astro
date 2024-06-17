@@ -6,11 +6,15 @@ import Radio from "./react/radio";
 ---
 
 <header class="flex items-center justify-between p-4 bg-black text-slate-200">
-  <Logo />
+  <div class="flex items-center gap-8">
+    <Logo />
 
-  <Nav />
+    <Nav />
+  </div>
 
-  <Radio client:load />
+  <div class="flex items-center gap-8">
+    <Radio client:load />
 
-  <Social />
+    <Social />
+  </div>
 </header>
