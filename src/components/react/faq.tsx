@@ -4,16 +4,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { faqs } from "@/libs/faqs";
 
 const Faq = () => {
   return (
     <Accordion type="single" collapsible>
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
+      {faqs.map(({ pregunta, respuesta }, i) => (
+        <AccordionItem value={`item-${i}`} key={`item-${i}`}>
+          <AccordionTrigger>{pregunta}</AccordionTrigger>
+          <AccordionContent>{respuesta}</AccordionContent>
+        </AccordionItem>
+      ))}
     </Accordion>
   );
 };

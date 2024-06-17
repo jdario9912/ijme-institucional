@@ -11,3 +11,8 @@ type Versiculo = {
   texto: string;
   cita: string;
 };
+
+type Faq = {
+  pregunta: string;
+  respuesta: string;
+};
