@@ -19,32 +19,15 @@ if (!images[imagePath])
 const imagen = images[imagePath]();
 ---
 
-<div class="container">
-  <Image src={imagen} alt={icono} />
-  <Icon name={icono} />
-  <h3>{titulo}</h3>
-  <p>{descripcion}</p>
+<div class="flex rounded-lg shadow-xl overflow-hidden bg-white">
+  <div class="size-40 md:size-48">
+    <Image src={imagen} alt={icono} class="hidden md:block aspect-square" />
+    <div class="flex items-center w-full h-full bg-slate-100">
+      <Icon name={icono} class="mx-auto text-green-600 text-6xl md:hidden" />
+    </div>
+  </div>
+  <div class="p-4">
+    <h3 class="text-2xl font-bold capitalize">{titulo}</h3>
+    <p>{descripcion}</p>
+  </div>
 </div>
-
-<style>
-  .container {
-    background-color: grey;
-  }
-
-  [data-icon] {
-    font-size: 2rem;
-    color: blue;
-  }
-
-  @media (width < 992px) {
-    img {
-      display: none;
-    }
-  }
-
-  @media (width >= 992px) {
-    [data-icon] {
-      display: none;
-    }
-  }
-</style>

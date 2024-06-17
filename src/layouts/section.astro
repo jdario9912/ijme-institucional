@@ -8,13 +8,13 @@ type Props = {
 const { id, title, padding } = Astro.props;
 ---
 
-<section class={padding ? "section" : ""} id={id}>
-  {title && <h2>{title}</h2>}
-  <slot />
-</section>
-
-<style>
-  .section {
-    padding: 0 3rem 0 3rem;
+<section class="py-11 px-2 sm:px-6 even:bg-gray-200" id={id}>
+  {
+    title ? (
+      <h2 class="text-4xl font-bold uppercase text-center mb-8">{title}</h2>
+    ) : null
   }
-</style>
+  <div class={padding ? "max-w-6xl mx-auto" : ""}>
+    <slot />
+  </div>
+</section>

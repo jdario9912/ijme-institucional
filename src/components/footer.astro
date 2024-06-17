@@ -1,7 +1,14 @@
 ---
 import Nav from "./nav.astro";
+import Social from "./social.astro";
 ---
 
-<footer>
+<footer
+  class="flex flex-col items-center gap-11 py-6 bg-slate-800 text-slate-200"
+>
   <Nav />
+  <div class="flex flex-col items-center gap-4">
+    <p>seguinos en:</p>
+    <Social />
+  </div>
 </footer>

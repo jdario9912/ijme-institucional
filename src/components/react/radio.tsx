@@ -4,8 +4,9 @@ const Radio = () => {
   const escucharRadio = () => {
     console.log("escuchando radio");
   };
+
   return (
-    <button onClick={escucharRadio}>
+    <button onClick={escucharRadio} className="flex">
       Radio
       <RadioIcon />
     </button>

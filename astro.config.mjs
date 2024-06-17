@@ -11,6 +11,8 @@ export default defineConfig({
     icon({
       iconDir: "src/icons",
     }),
-    tailwind(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
   ],
 });

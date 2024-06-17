@@ -6,3 +6,8 @@ type Ministerio = {
   titulo: string;
   descripcion: string;
 };
+
+type Versiculo = {
+  texto: string;
+  cita: string;
+};

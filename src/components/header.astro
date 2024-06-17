@@ -5,7 +5,7 @@ import Social from "./social.astro";
 import Radio from "./react/radio";
 ---
 
-<header>
+<header class="flex items-center justify-between p-4 bg-black text-slate-200">
   <Logo />
 
   <Nav />
@@ -14,12 +14,3 @@ import Radio from "./react/radio";
 
   <Social />
 </header>
-
-<style>
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-</style>

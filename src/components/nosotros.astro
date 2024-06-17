@@ -1,0 +1,18 @@
+---
+import { versiculos } from "@/libs/versiculos";
+import Versiculo from "./versiculo.astro";
+---
+
+<p>
+  La Iglesia Jesucristo Mi Esperanza (IJME) tiene como cabeza y autoridad al
+  Señor Jesús, dándole unidad, propósito y dirección. Se predica el verdadero
+  evangelio del Señor Jesús, que salva, restaura y santifica vidas por medio de
+  la obra del Espíritu Santo.
+</p>
+
+{versiculos.map((versiculo) => <Versiculo {...versiculo} />)}
+
+<p>
+  Las personas que aceptan y reconocen a Jesús como su Señor y salvador
+  personal, se convierten en un hijo/a de Dios.
+</p>

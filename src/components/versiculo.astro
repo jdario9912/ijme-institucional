@@ -1,0 +1,12 @@
+---
+type Props = Versiculo;
+
+const { cita, texto } = Astro.props;
+---
+
+<div class="my-6">
+  <p class="text-center font-light italic">
+    “{texto}”
+  </p>
+  <p class="text-center font-bold">{cita}</p>
+</div>
