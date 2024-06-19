@@ -1,0 +1,7 @@
+---
+type Props = { className?: string; href: string; label: string };
+
+const { className, href, label } = Astro.props;
+---
+
+<a class={`${className} hover:underline`} href={href}>{label}</a>

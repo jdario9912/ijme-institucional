@@ -2,19 +2,30 @@
 import Logo from "./logo.astro";
 import Nav from "./nav.astro";
 import Social from "./social.astro";
-import Radio from "./react/radio";
+import Hamburger from "./hamburger.astro";
+import Radio from "./radio.astro";
 ---
 
-<header class="flex items-center justify-between p-4 bg-black text-slate-200">
+<header
+  class="fixed flex items-center justify-between w-full p-4 bg-black/90 text-slate-200 lg:px-10"
+>
   <div class="flex items-center gap-8">
     <Logo />
 
-    <Nav />
+    <div class="hidden lg:block">
+      <Nav />
+    </div>
   </div>
 
   <div class="flex items-center gap-8">
-    <Radio client:load />
-
+    <Radio />
+    
     <Social />
+
+    <Hamburger />
   </div>
 </header>
+
+<div class="nav-mobile fixed -translate-x-full">
+  <Nav />
+</div>
