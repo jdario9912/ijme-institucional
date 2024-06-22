@@ -41,3 +41,14 @@ selector(".list-link")?.addEventListener("click", () => {
   //   link.classList.remove("top-0");
   // });
 });
+
+const desktop = window.matchMedia("(min-width: 720px)")
+
+desktop.addEventListener("change", (event
+) => {
+  if( event.matches){
+    console.log("tamano ok");
+    
+  }
+  
+})

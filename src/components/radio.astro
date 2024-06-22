@@ -7,25 +7,17 @@ const urlRadio = "http://radio02.ferozo.com:8144/;stream/1";
 <div>
   <audio src={urlRadio} id="audio"></audio>
 
-  <button id="play" class="mostrar">radio play 
-    <!-- <Icon name="play" /> -->
+  <button id="play" class="flex items-center gap-1">
+    <span> radio </span>
+    <Icon name="play" />
   </button>
 
-  <button id="stop" class="ocultar">radio stop 
-    <!-- <Icon name="stop" /> -->
+  <button id="stop" class="hidden items-center gap-1">
+    <span> radio </span>
+    <Icon name="stop" />
   </button>
 </div>
 
 <script>
   import "@/scripts/reproductor-radio.ts";
 </script>
-
-<style>
-  .ocultar {
-    display: none;
-  }
-
-  .mostrar {
-    display: block;
-  }
-</style>

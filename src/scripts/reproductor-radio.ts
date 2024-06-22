@@ -2,8 +2,8 @@ const audio = document.getElementById("audio") as HTMLAudioElement;
 const playBtn = document.getElementById("play") as HTMLButtonElement;
 const stopBtn = document.getElementById("stop") as HTMLButtonElement;
 
-const ocultar = "ocultar";
-const mostrar = "mostrar";
+const ocultar = "hidden";
+const mostrar = "flex";
 
 const toggleClasesBtn = {
   remover: (btn: HTMLButtonElement, clase: string) =>
