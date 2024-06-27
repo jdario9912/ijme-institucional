@@ -2,7 +2,7 @@
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import "@/global.css";
-import "@fontsource/montserrat"
+import "@fontsource/montserrat";
 ---
 
 <!doctype html>
@@ -16,12 +16,14 @@ import "@fontsource/montserrat"
   <body>
     <Header />
 
-    <slot />
+    <div>
+      <slot />
 
-    <Footer />
+      <Footer />
+    </div>
 
     <script>
-      import "@/scripts/menu.ts"
+      import "@/scripts/menu.ts";
     </script>
   </body>
 </html>

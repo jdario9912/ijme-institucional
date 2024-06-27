@@ -3,8 +3,10 @@ import { navigation } from "@/libs/navigation";
 import Link from "./link.astro";
 ---
 
-<nav>
-  <ul class="nav-links items-center gap-4 flex">
+<nav
+  class="absolute top-24 left-0 p-4 -translate-x-full bg-black/90 lg:block lg:relative lg:top-0 lg:translate-x-0 lg:bg-transparent"
+>
+  <ul class="flex flex-col gap-4 lg:flex-row">
     {
       navigation.map((link) => (
         <li>
@@ -14,9 +16,3 @@ import Link from "./link.astro";
     }
   </ul>
 </nav>
-
-<style>
-  a {
-    @apply capitalize;
-  }
-</style>
