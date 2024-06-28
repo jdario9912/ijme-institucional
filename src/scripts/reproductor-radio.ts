@@ -1,6 +1,19 @@
-const audio = document.getElementById("audio") as HTMLAudioElement;
-const playBtn = document.getElementById("play") as HTMLButtonElement;
-const stopBtn = document.getElementById("stop") as HTMLButtonElement;
+const onRadioPlay = "onRadioPlay";
+
+const setRadioOn = () =>
+  globalThis.localStorage.setItem(onRadioPlay, JSON.stringify(true));
+
+const setRadioOff = () =>
+  globalThis.localStorage.setItem(onRadioPlay, JSON.stringify(false));
+
+export const radioIsPlaying = () => {
+  const radioPlay = globalThis.localStorage.getItem(onRadioPlay);
+  return JSON.parse(radioPlay!);
+};
+
+export const audio = document.getElementById("audio") as HTMLAudioElement;
+export const playBtn = document.getElementById("play") as HTMLButtonElement;
+export const stopBtn = document.getElementById("stop") as HTMLButtonElement;
 
 const ocultar = "hidden";
 const mostrar = "flex";
@@ -11,7 +24,7 @@ const toggleClasesBtn = {
   add: (btn: HTMLButtonElement, clase: string) => btn.classList.add(clase),
 };
 
-const accionesReproductor = {
+export const iconoRadio = {
   ocultarPlay: (
     playButton: HTMLButtonElement,
     stopButton: HTMLButtonElement
@@ -34,14 +47,15 @@ const accionesReproductor = {
   },
 };
 
+// falta ver si onPlay es true o false para mostrar icono de play u stop
 playBtn?.addEventListener("click", () => {
+  setRadioOn();
   audio.play();
-
-  accionesReproductor.ocultarPlay(playBtn, stopBtn);
+  iconoRadio.ocultarPlay(playBtn, stopBtn);
 });
 
 stopBtn?.addEventListener("click", () => {
+  setRadioOff();
   audio.pause();
-
-  accionesReproductor.ocultarStop(playBtn, stopBtn);
+  iconoRadio.ocultarStop(playBtn, stopBtn);
 });

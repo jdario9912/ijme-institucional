@@ -24,6 +24,23 @@ import "@fontsource/montserrat";
 
     <script>
       import "@/scripts/menu.ts";
+      import {
+        audio,
+        radioIsPlaying,
+        iconoRadio,
+        playBtn,
+        stopBtn,
+      } from "@/scripts/reproductor-radio";
+
+      const playingRadio = radioIsPlaying();
+
+      if (playingRadio) {
+        iconoRadio.ocultarPlay(playBtn, stopBtn);
+        audio.play();
+      } else {
+        iconoRadio.ocultarStop(playBtn, stopBtn);
+        audio.pause();
+      }
     </script>
   </body>
 </html>
