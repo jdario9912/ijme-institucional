@@ -1,18 +1,18 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const urlRadio = "https://genexservicios.com:8052/stream"
+const urlRadio = "https://genexservicios.com:8052/stream";
 ---
 
 <div>
   <audio src={urlRadio} id="audio"></audio>
 
-  <button id="play" class="flex items-center gap-1">
+  <button id="play" class="flex items-center gap-1 hover:text-yellow-200 active:text-yellow-400">
     <span> radio </span>
     <Icon name="play" />
   </button>
 
-  <button id="stop" class="hidden items-center gap-1">
+  <button id="stop" class="hidden items-center gap-1 hover:text-yellow-200 active:text-yellow-400">
     <span> radio </span>
     <Icon name="stop" />
   </button>

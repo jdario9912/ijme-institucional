@@ -16,3 +16,13 @@ type Faq = {
   pregunta: string;
   respuesta: string;
 };
+
+type Navegation = {
+  href: string;
+  label: string;
+};
+
+type SocialNavegation = {
+  href: string;
+  icono: string;
+};

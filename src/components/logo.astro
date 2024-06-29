@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 type Props = {
   black?: boolean;
 };
@@ -10,9 +12,13 @@ const logoBlanco = "logo-blanco.webp";
 ---
 
 <a href="/">
-  <img
+  <Image
+    width={73}
+    height={73}
     src={`/${black ? logoNegro : logoBlanco}`}
     alt="logo ijme"
     class="w-14 min-w-11"
+    loading="eager"
+    decoding="async"
   />
 </a>

@@ -1,16 +1,14 @@
 ---
-import { Icon } from "astro-icon/components";
+import SocialLink from "./social-link.astro";
+import { socialNavigation } from "../libs/social-navigation";
 ---
 
 <ul class="flex gap-3 text-2xl">
-  <li>
-    <a href="https://www.instagram.com/ijmesunchales/" target="_blank">
-      <Icon name="instagram" />
-    </a>
-  </li>
-  <li>
-    <a href="https://www.youtube.com/@ijmesunchales7018" target="_blank">
-      <Icon name="youtube" />
-    </a>
-  </li>
+  {
+    socialNavigation.map(({ href, icono }) => (
+      <li>
+        <SocialLink href={href} icono={icono} />
+      </li>
+    ))
+  }
 </ul>
