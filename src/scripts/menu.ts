@@ -1,30 +1,26 @@
-type ElementoHTML = HTMLElement | null;
+import {
+  mostrarNav,
+  ocultarNav,
+  resetNav,
+  selector,
+  toggleHidden,
+} from "@/libs/menu";
 
-const selector = (name: string): ElementoHTML => document.querySelector(name);
-
-const toggleHidden = (element: ElementoHTML) =>
-  element?.classList.toggle("hidden");
-
-const resetNav = (
-  hamburgerIcon: ElementoHTML,
-  closeIcon: ElementoHTML,
-  nav: ElementoHTML
-) => {
-  toggleHidden(hamburgerIcon);
-  toggleHidden(closeIcon);
-
-  nav?.classList.toggle("translate-x-0");
-};
-
-// DOM
+// Elementos
 const hamburger = selector(".hamburger");
 const hamburgerIcon = selector(".hamburger-icon");
 const closeIcon = selector(".close-icon");
 const nav = selector("nav");
 
-// Events
-hamburger?.addEventListener("click", () =>
-  resetNav(hamburgerIcon, closeIcon, nav)
-);
+// Eventos
+hamburger?.addEventListener("click", () => {
+  const haveShowNav = nav?.classList.contains("show-nav");
+
+  toggleHidden(hamburgerIcon);
+  toggleHidden(closeIcon);
+
+  if (haveShowNav) ocultarNav(nav);
+  else mostrarNav(nav);
+});
 
 window.onhashchange = () => resetNav(hamburgerIcon, closeIcon, nav);

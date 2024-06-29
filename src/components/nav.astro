@@ -4,7 +4,7 @@ import Link from "./link.astro";
 ---
 
 <nav
-  class="absolute top-24 left-0 p-4 -translate-x-full bg-black/90 lg:block lg:relative lg:top-0 lg:translate-x-0 lg:bg-transparent"
+  class="absolute top-24 left-0 p-4 h-full -translate-x-full bg-black/95 lg:block lg:relative lg:top-0 lg:translate-x-0 lg:bg-transparent"
 >
   <ul class="flex flex-col gap-4 lg:flex-row">
     {
@@ -16,3 +16,32 @@ import Link from "./link.astro";
     }
   </ul>
 </nav>
+
+<style>
+  /* terminar esta animacion para movile */
+  .show-nav {
+    animation: nav-hidden-to-right 0.5s ease-in;
+  }
+
+  @keyframes nav-hidden-to-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .hidden-nav {
+    animation: nav-from-right-to-hidden 0.5s ease-in;
+  }
+
+  @keyframes nav-from-right-to-hidden {
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+  }
+</style>
