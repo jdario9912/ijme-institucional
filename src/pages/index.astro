@@ -1,9 +1,9 @@
 ---
-import Ministerios from "../components/ministerios.astro";
-import Hero from "../components/hero.astro";
+import Ministerios from "../components/sections/ministerios.astro";
+import Hero from "../components/sections/hero.astro";
 import BaseLayout from "../layouts/base.astro";
 import Section from "../layouts/section.astro";
-import Nosotros from "../components/nosotros.astro";
+import Nosotros from "../components/sections/nosotros.astro";
 import Faq from "../components/react/faq";
 import Galeria from "@/components/react/galeria";
 ---
@@ -11,7 +11,7 @@ import Galeria from "@/components/react/galeria";
 <BaseLayout>
   <Hero />
 
-  <Section id="galeria" padding>
+  <Section id="galeria">
     <Galeria client:load />
   </Section>
 

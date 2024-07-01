@@ -6,56 +6,33 @@ const setRadioOn = () =>
 const setRadioOff = () =>
   globalThis.localStorage.setItem(onRadioPlay, JSON.stringify(false));
 
-export const radioIsPlaying = () => {
+const radioIsPlaying = () => {
   const radioPlay = globalThis.localStorage.getItem(onRadioPlay);
   return JSON.parse(radioPlay!);
 };
 
-export const audio = document.getElementById("audio") as HTMLAudioElement;
-export const playBtn = document.getElementById("play") as HTMLButtonElement;
-export const stopBtn = document.getElementById("stop") as HTMLButtonElement;
+const playingRadio = radioIsPlaying();
 
-const ocultar = "hidden";
-const mostrar = "flex";
+const audio = document.getElementById("audio") as HTMLAudioElement;
 
-const toggleClasesBtn = {
-  remover: (btn: HTMLButtonElement, clase: string) =>
-    btn.classList.remove(clase),
-  add: (btn: HTMLButtonElement, clase: string) => btn.classList.add(clase),
-};
+const radioCheckbox = document.querySelector(
+  "input[name=radio]"
+) as HTMLInputElement;
 
-export const iconoRadio = {
-  ocultarPlay: (
-    playButton: HTMLButtonElement,
-    stopButton: HTMLButtonElement
-  ) => {
-    toggleClasesBtn.remover(playButton, mostrar);
-    toggleClasesBtn.add(playButton, ocultar);
+radioCheckbox?.addEventListener("change", () => {
+  if (radioCheckbox.checked) {
+    setRadioOn();
+    audio.play();
+  } else {
+    audio.pause();
+    setRadioOff();
+  }
+});
 
-    toggleClasesBtn.remover(stopButton, ocultar);
-    toggleClasesBtn.add(stopButton, mostrar);
-  },
-  ocultarStop: (
-    playButton: HTMLButtonElement,
-    stopButton: HTMLButtonElement
-  ) => {
-    toggleClasesBtn.remover(playButton, ocultar);
-    toggleClasesBtn.add(playButton, mostrar);
-
-    toggleClasesBtn.remover(stopButton, mostrar);
-    toggleClasesBtn.add(stopButton, ocultar);
-  },
-};
-
-// falta ver si onPlay es true o false para mostrar icono de play u stop
-playBtn?.addEventListener("click", () => {
-  setRadioOn();
+if (playingRadio) {
   audio.play();
-  iconoRadio.ocultarPlay(playBtn, stopBtn);
-});
-
-stopBtn?.addEventListener("click", () => {
-  setRadioOff();
+  radioCheckbox.checked = true;
+} else {
+  radioCheckbox.checked = false;
   audio.pause();
-  iconoRadio.ocultarStop(playBtn, stopBtn);
-});
+}
