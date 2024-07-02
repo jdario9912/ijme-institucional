@@ -1,16 +1,29 @@
-<h3>Queremos verte crecer...</h3>
+---
+import { materias } from "@/libs/escuela-crecimiento";
+import { Icon } from "astro-icon/components";
+---
 
-<p>
+<h3 class="mb-2 text-xl font-bold">Queremos verte crecer...</h3>
+
+<p class="mb-4">
   Ofrecemos un camino ordenado y sistemático donde conocerás todos los aspectos
   fundamentales para tu nueva vida cristiana.
 </p>
 
-<h4>Materias</h4>
+<h4 class="mb-2 text-xl font-bold">Materias</h4>
 
 <ol>
-  <li>Primeros pasos: <p></p></li>
-  <li>Comunidad: <p></p></li>
-  <li>Madurez: <p></p></li>
-  <li>Ministerio: <p></p></li>
-  <li>Liderazgo: <p></p></li>
+  {
+    materias.map(({ titulo, parrafos }) => (
+      <li class="mb-4">
+        <div class="flex items-center gap-2 mb-1">
+          <Icon class="text-yellow-500 text-xl" name="book" />
+          <span class="font-bold">{titulo}:</span>
+        </div>
+        {parrafos.map((parrafo) => (
+          <p class="pl-7 mb-1">{parrafo}</p>
+        ))}
+      </li>
+    ))
+  }
 </ol>
