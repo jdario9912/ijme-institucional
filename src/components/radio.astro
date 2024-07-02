@@ -7,11 +7,11 @@ const urlRadio = "https://genexservicios.com:8052/stream";
 <div>
   <audio class="hidden" src={urlRadio} id="audio"></audio>
 
-  <div class="container flex items-center gap-2">
+  <div class="container flex items-center">
     <input id="checkbox" type="checkbox" name="radio" />
     <label class="button" for="checkbox">
-      <span>radio</span>
       <Icon class="on-off" name="on-off-radio" />
+      <span class="text-xs capitalize">radio encuentro</span>
     </label>
   </div>
 </div>
@@ -48,10 +48,12 @@ const urlRadio = "https://genexservicios.com:8052/stream";
   }
 
   .container input:checked + .button .on-off {
+    width: 2.3rem;
+    height: 2.3rems;
     fill: rgba(247, 251, 216, 0.635);
     transform: scale(110%);
     animation: animeFill 0.5s linear alternate-reverse infinite;
-    border: 2px solid rgba(255, 246, 77, 0.3);
+    /* border: 2px solid rgba(255, 246, 77, 0.3); */
     border-radius: 100%;
   }
 
