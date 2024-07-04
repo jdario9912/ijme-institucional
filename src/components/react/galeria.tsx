@@ -21,7 +21,7 @@ const Galeria = () => {
         {fotos.map((foto) => (
           <CarouselItem key={foto}>
             <img
-              src={`../../img/galeria/${foto}`}
+              src={`src/img/galeria/${foto}`}
               alt={foto}
               className="mx-auto"
 
