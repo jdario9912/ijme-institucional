@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/dialog";
 import { useState, type FC } from "react";
 
-const MinisterioDialog: FC<Ministerio> = ({ descripcion, titulo }) => {
-  const [esRadio] = useState(titulo === "radio");
+const MinisterioDialog: FC<Ministerio> = ({ descripcion, titulo, icono }) => {
+  const [esRadio] = useState(icono === "radio");
 
   const parrafos = descripcion.split(".");
 
