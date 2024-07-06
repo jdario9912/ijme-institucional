@@ -20,9 +20,11 @@ import { Icon } from "astro-icon/components";
           <Icon class="text-yellow-500 text-xl" name="book" />
           <span class="font-bold">{titulo}:</span>
         </div>
-        {parrafos.map((parrafo) => (
-          <p class="pl-7 mb-1">{parrafo}</p>
-        ))}
+        <div class="border-l border-slate-400">
+          {parrafos.map((parrafo) => (
+            <p class="pl-7 mb-1">{parrafo}</p>
+          ))}
+        </div>
       </li>
     ))
   }
