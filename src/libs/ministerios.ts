@@ -51,6 +51,6 @@ export const ministerios: Ministerio[] = [
     icono: "radio",
     titulo: "radio encuentro",
     descripcion:
-      "Radio Encuentro 107.3 es la radio de Sunchales y la región que lleva un mensaje diferente, no se trata de religión, el objetivo es llevar el mensaje de Jesús de una manera dinámica y moderna. Destacamos a Dios sobre todas las cosas, llevando fe, amor y perdón a través de la música, mensajes, reflexiones, pensamientos y nuestros programas en vivo",
+      "Es la radio de Sunchales y la región que lleva un mensaje diferente, no se trata de religión, el objetivo es llevar el mensaje de Jesús de una manera dinámica y moderna. Destacamos a Dios sobre todas las cosas, llevando fe, amor y perdón a través de la música, mensajes, reflexiones, pensamientos y nuestros programas en vivo.",
   },
 ];

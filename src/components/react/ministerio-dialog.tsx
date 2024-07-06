@@ -10,17 +10,26 @@ import { useState, type FC } from "react";
 
 const MinisterioDialog: FC<Ministerio> = ({ descripcion, titulo }) => {
   const [esRadio] = useState(titulo === "radio");
+
+  const parrafos = descripcion.split(".");
+
+  const parrafosFormateados = parrafos
+    .map((parrafo) => parrafo.concat(".").trim())
+    .filter((elemento) => elemento.length > 1);
+
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">leer más</Button>
+        <Button variant="outline" size="sm">leer más</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]" aria-describedby={titulo}>
         <DialogHeader>
           <DialogTitle className="capitalize">{titulo}</DialogTitle>
         </DialogHeader>
 
-        <p className="first-letter:capitalize">{descripcion}</p>
+        {parrafosFormateados.map((parrafo, i) => (
+          <p key={i} className="first-letter:capitalize">{parrafo}</p>
+        ))}
 
         {esRadio && (
           <>

@@ -3,6 +3,6 @@ import { ministerios } from "../../libs/ministerios";
 import MiniterioCard from "../miniterio-card.astro";
 ---
 
-<div class="grid gap-4 lg:grid-cols-2">
+<div class="grid gap-4 lg:grid-cols-2 lg:gap-8">
   {ministerios.map((ministerio) => <MiniterioCard {...ministerio} />)}
 </div>
