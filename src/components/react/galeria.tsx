@@ -5,7 +5,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-const fotos = ["galery01.jpeg", "galery02.jpeg", "galery03.jpeg"];
+const fotos = ["galery01.png", "galery02.png", "galery03.png"];
 
 const Galeria = () => {
   return (
