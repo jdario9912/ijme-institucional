@@ -5,7 +5,7 @@ export const faqs : Faq[]=
     respuesta: "Es un grupo de 5 a 10 personas que nos juntamos a orar por nuestras necesidades y hacer amigos."
   },
   {
-    pregunta: "¿Quién puede asistir?",
+    pregunta: "¿Quién puede asistir a la iglesia?",
     respuesta: "Toda persona que quiera buscar y encontrar a Dios."
   }
 ]

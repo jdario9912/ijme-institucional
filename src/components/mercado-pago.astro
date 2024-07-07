@@ -1,0 +1,25 @@
+---
+import { alias, cbu, cuit } from "@/libs/donaciones";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="border p-4 py-8 shadow text-base max-w-[400px] mx-auto md:text-lg">
+  <h3 class="font-bold mb-4">IGLESIA JESUCRISTO MI ESPERANZA SUNCHALES</h3>
+  
+  <p class="mb-2"><strong>CVU:</strong> {cbu}</p>
+
+  <p class="mb-2">
+    <strong>Alias:</strong>
+    {alias}
+    <button class="ml-4 lg:hidden active:text-blue-600" id="alias">
+      <Icon name="copy" />
+    </button>
+  </p>
+  
+  <p class="mb-2"><strong>CUIT/CUIL:</strong> {cuit}</p>
+
+  <div class="flex items-center gap-3">
+    <p class="font-bold">Mercado Pago</p>
+    <Icon class="text-blue-600 text-3xl" name="mercado-pago" />
+  </div>
+</div>

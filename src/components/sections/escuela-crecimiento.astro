@@ -3,14 +3,14 @@ import { materias } from "@/libs/escuela-crecimiento";
 import { Icon } from "astro-icon/components";
 ---
 
-<h3 class="mb-2 text-xl font-bold">Queremos verte crecer...</h3>
+<h3 class="mb-4 text-xl font-bold">Queremos verte crecer...</h3>
 
-<p class="mb-4">
+<p class="mb-8">
   Ofrecemos un camino ordenado y sistemático donde conocerás todos los aspectos
   fundamentales para tu nueva vida cristiana.
 </p>
 
-<h4 class="mb-2 text-xl font-bold">Materias</h4>
+<h4 class="mb-4 text-xl font-bold">Materias:</h4>
 
 <ol>
   {
@@ -20,10 +20,12 @@ import { Icon } from "astro-icon/components";
           <Icon class="text-yellow-500 text-xl" name="book" />
           <span class="font-bold">{titulo}:</span>
         </div>
-        <div class="border-l border-slate-400">
-          {parrafos.map((parrafo) => (
-            <p class="pl-7 mb-1">{parrafo}</p>
-          ))}
+        <div class="pl-2">
+          <div class="border-l border-slate-400">
+            {parrafos.map((parrafo) => (
+              <p class="pl-7 mb-1">{parrafo}</p>
+            ))}
+          </div>
         </div>
       </li>
     ))
