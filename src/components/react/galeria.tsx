@@ -5,7 +5,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-const fotos = ["galery01.png", "galery02.png", "galery03.png"];
+const fotos = ["galery01.webp", "galery02.webp", "galery03.webp", "galery04.webp", "galery05.webp"];
 
 const Galeria = () => {
   return (
@@ -23,7 +23,7 @@ const Galeria = () => {
             <img
               src={`/galery/${foto}`}
               alt={foto}
-              className="mx-auto"
+              className="mx-auto w-full h-full"
 
             />
           </CarouselItem>

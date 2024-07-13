@@ -23,4 +23,8 @@ hamburger?.addEventListener("click", () => {
   else mostrarNav(nav);
 });
 
-window.onhashchange = () => resetNav(hamburgerIcon, closeIcon, nav);
+window.onhashchange = () => {
+  console.log("wasi el menu");
+
+  resetNav(hamburgerIcon, closeIcon, nav);
+};
