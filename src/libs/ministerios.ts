@@ -9,7 +9,7 @@ export const ministerios: Ministerio[] = [
     icono: "jovenes",
     titulo: "jóvenes",
     descripcion:
-      "El grupo está dirigido a jóvenes de 11 a 17 años. El deseo es que seas parte de una generación apasionada por Dios. Nos reunimos todos los sábados en \"El Palco\" para compartir un momento especial.",
+      'El grupo está dirigido a jóvenes de 11 a 17 años. El deseo es que seas parte de una generación apasionada por Dios. Nos reunimos todos los sábados en "El Palco" para compartir un momento especial.',
   },
   // {
   //   icono: "mantenimiento",
@@ -52,5 +52,11 @@ export const ministerios: Ministerio[] = [
     titulo: "radio encuentro",
     descripcion:
       "Es la radio de Sunchales y la región que lleva un mensaje diferente. El objetivo es llevar el mensaje de Jesús de una manera dinámica y moderna. Destacamos a Dios sobre todas las cosas, llevando fe, amor y perdón a través de la música, mensajes, reflexiones, pensamientos y nuestros programas en vivo.",
+  },
+  {
+    icono: "ninos",
+    titulo: "Niñes",
+    descripcion:
+      "Un espacio especial para los mas chiquitos. Clases y temas especiales para que aprendan del amor de Dios desde temprana edad.",
   },
 ];
