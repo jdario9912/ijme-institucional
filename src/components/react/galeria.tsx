@@ -17,7 +17,7 @@ const Galeria = () => {
       }}
       plugins={[Autoplay({ delay: 2000 })]}
     >
-      <CarouselContent className="w-1/2 mx-auto">
+      <CarouselContent className="md:w-1/2 mx-auto">
         {fotos.map((foto) => (
           <CarouselItem key={foto}>
             <img
