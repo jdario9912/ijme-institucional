@@ -17,10 +17,11 @@ export const resetNav = (
   closeIcon: ElementoHTML,
   nav: ElementoHTML
 ) => {
-  toggleHidden(hamburgerIcon);
-  toggleHidden(closeIcon);
+  removeClass(hamburgerIcon, "hidden");
 
-  nav?.classList.toggle("translate-x-0");
+  addClass(closeIcon, "hidden");
+
+  addClass(nav, "-translate-x-full");
 };
 
 export const ocultarNav = (nav: ElementoHTML) => {

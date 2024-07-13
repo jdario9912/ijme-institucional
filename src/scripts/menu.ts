@@ -19,8 +19,10 @@ hamburger?.addEventListener("click", () => {
   toggleHidden(hamburgerIcon);
   toggleHidden(closeIcon);
 
-  if (haveShowNav) ocultarNav(nav);
-  else mostrarNav(nav);
+  if (haveShowNav) {
+    ocultarNav(nav);
+    resetNav(hamburgerIcon, closeIcon, nav);
+  } else mostrarNav(nav);
 });
 
 window.onhashchange = () => {
