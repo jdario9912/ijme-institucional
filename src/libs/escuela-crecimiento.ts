@@ -29,7 +29,8 @@ export const materias: Materia[] = [
     titulo: "Ministerio",
     parrafos: [
       "En cada clase serás motivado a desarrollar un corazón que sirve a Dios. ¿Qué enseña la Biblia acerca del ministerio? ",
-      "Recibirás orientación acerca del proceso de descubrir tu lugar único en el cuerpo: tu ministerio.<br>Te ayudaremos a descubrir los dones espirituales, talentos naturales y recursos que tiene y puedes desarrollar para servir al Señor.",
+      "Recibirás orientación acerca del proceso de descubrir tu lugar único en el cuerpo: tu ministerio.",
+      "Te ayudaremos a descubrir los dones espirituales, talentos naturales y recursos que tiene y puedes desarrollar para servir al Señor.",
     ],
   },
   {
