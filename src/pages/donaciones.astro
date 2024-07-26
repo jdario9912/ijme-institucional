@@ -5,10 +5,8 @@ import Section from "@/layouts/section.astro";
 ---
 
 <BaseLayout>
-  <Section id="donaciones">
+  <Section id="donaciones" padding>
     <section class="min-h-screen">
-      <!-- <h2 class="text-4xl font-bold uppercase text-center mb-8">donaciones</h2> -->
-
       <p class="mb-4">La Biblia revela el corazon y la mente del Señor.</p>
       <p class="mb-4">
         Jesús dijo:
@@ -29,8 +27,12 @@ import Section from "@/layouts/section.astro";
         Si queres hacer una donacion, dar una ofrenda o enviar tus diezmos,
         podrás hacerlo de manera online.
       </p>
+      
+      <div class="flex justify-center w-full">
+        <MercadoPago />
 
-      <MercadoPago />
+        <img src="mp_QR.webp" alt="qr mercado pago" />
+      </div>
     </section>
   </Section>
 </BaseLayout>
