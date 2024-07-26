@@ -2,7 +2,7 @@ export const versiculos: Versiculo[] = [
   {
     texto:
       "Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él.",
-    cita: "Juan 3:16",
+    cita: "Juan 3:17",
   },
   {
     texto:
