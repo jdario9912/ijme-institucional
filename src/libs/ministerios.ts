@@ -55,7 +55,7 @@ export const ministerios: Ministerio[] = [
   },
   {
     icono: "ninos",
-    titulo: "Niñes",
+    titulo: "Niñez",
     descripcion:
       "Un espacio especial para los mas chiquitos. Clases y temas especiales para que aprendan del amor de Dios desde temprana edad.",
   },
