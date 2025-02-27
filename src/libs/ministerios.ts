@@ -45,7 +45,12 @@ export const ministerios: Ministerio[] = [
     icono: "alabanza",
     titulo: "alabanza",
     descripcion:
-      "Guia al pueblo de Dios en alabanza y a tener un momento de intimidad con Él, atraer la presencia de su Santo Espíritu y proclamar sus virtudes.",
+      "Guiar al pueblo de Dios en alabanza y a tener un momento de intimidad con Él, atraer la presencia de su Santo Espíritu y proclamar sus virtudes.",
+  },
+  {
+    titulo: "pre-adolescentes",
+    icono: "pre-ados",
+    descripcion: "Si tenés entre 12 y 14 años éste es tu lugar. Encontrarás nuevos amigos, diversión y una palabra de aliento de parte de Dios para ti. Nos juntamos los viernes en \"El Palco\"."
   },
   {
     icono: "radio",
