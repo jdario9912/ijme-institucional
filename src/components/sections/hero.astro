@@ -32,9 +32,15 @@
 
 <style>
   .hero-container {
-    background-image: url("/hero.webp");
+    background-image: url("/hero-desktop.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .hero-container{
+      background-image: url("/hero.webp");
+    }
   }
 </style>

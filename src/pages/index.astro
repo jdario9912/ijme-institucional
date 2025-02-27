@@ -7,6 +7,7 @@ import Nosotros from "../components/sections/nosotros.astro";
 import Faq from "../components/react/faq";
 import Galeria from "@/components/react/galeria";
 import EscuelaCrecimiento from "@/components/sections/escuela-crecimiento.astro";
+import Banner from "@/components/banner.astro";
 ---
 
 <BaseLayout>
@@ -15,6 +16,8 @@ import EscuelaCrecimiento from "@/components/sections/escuela-crecimiento.astro"
   <Section id="galeria">
     <Galeria client:load />
   </Section>
+
+  <Banner />
 
   <Section id="ministerios" title="ministerios" padding>
     <Ministerios />
